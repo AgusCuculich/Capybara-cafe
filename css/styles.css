@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@1,500&display=swap'); /*fuente resto del doc*/
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /*fuente menu*/
+
+
+html {
+    font: 120% 'Ysabeau Office', sans-serif;
+}
+
+* {
+    color: black;
+    text-align: justify;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url(../images/fondoBody.jpg);
+}
+
+
+
+/*      barra nav        */
+
+header.menu {
+    /*la altura esta en auto para que una vez que se despliegue el menu, se le siga aplicando el background-color del header*/
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+    background-color: #6a5449;
+    position: sticky;
+    z-index: 1;
+    top: 0px;
+}
+
+
+.logo_botonera {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.logo {
+    height: 100%;
+}
+
+
+.nombrePyme {
+    font-size: 50px;
+}
+
+
+#btn-menu {
+    height: auto;
+    background-image: url(../images/fondoBody.jpg);
+    padding: 5px;
+    width: auto;
+    align-self: center;
+    margin: 10px;
+    font: 120% 'Great Vibes', cursive;
+    font-weight: bold;
+}
+
+
+
+.elementoOculto {
+    display: none;
+}
+
+
+.barra_nav ul li {
+    margin: 5px;
+    padding: 5px;
+}
+
+.barra_nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.barra_nav ul li:hover {
+    background-image: url(../images/fondoBody.jpg);
+}
+
+
+
+/*      inicio        */
+
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.nosotros h1 {
+    text-align: center;
+    margin: 10px;
+    font-size: 50px;
+}
+
+
+figure.oferta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+figure.oferta img {
+    width: 70%;
+    padding: 2%;
+    background-color: white;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+figure.oferta figcaption {
+    /*titulo de */
+    width: 74%;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    border-top: none;
+}
+
+
+section.allreviews {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+section.allreviews h2 {
+    width: auto;
+    color: #e0c3c6;
+    display: flex;
+    margin-right: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    background-color: #6a5449;
+}
+
+.reviews_scroll {
+    display: grid;
+    width: 80%;
+    border: 2px solid #6a5449;
+    grid-template-columns: 100% 100% 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "review1 review2 review3";
+    overflow-x: auto;
+    column-gap: 5px;
+}
+
+#review1 {
+    grid-area: review1;
+}
+
+#review2 {
+    grid-area: review2;
+}
+
+#review3 {
+    grid-area: review3;
+}
+
+.review {
+    margin: 10px;
+}
+
+.encabezado_review {
+    display: flex;
+    height: 30px;
+    justify-content: space-around;
+}
+
+.img_corazones {
+    height: 100%;
+}
+
+
+.resaltado {
+    font-weight: bold;
+}
+
+.textoReview {
+    font-style: italic;
+}
+
+
+/*      products        */
+
+.main_productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto {
+    height: auto;
+    width: 90%;
+    border: 1px solid #6a5449;
+    margin: 10px;
+}
+
+.img_producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.img_producto img {
+    width: 50%;
+}
+
+.info_producto header p {
+    text-align: center;
+    font-size: 120%;
+}
+
+
+.info_producto {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+
+.nombre_producto {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+/*      proveedores        */
+
+
+.tabla_proveedores {
+    border: collapse;
+    border-collapse: collapse;
+}
+
+.img_variedades {
+    width: 100%;
+}
+
+div.tabla_scroll {
+    /*hace que podamos desplazar la tabla hacia la derecha*/
+    overflow-x: auto;
+}
+
+.tabla_proveedores td {
+    /*El padding logra que visualmente se vea un poco de espacio antes de que el contenido de la celda toque el borde*/
+    min-width: 100px;
+    text-align: center;
+    padding: 1%;
+    border-collapse: collapse;
+    border: 2px solid #6a5449;
+}
+
+.tabla_proveedores .td_img {
+    min-width: 300px;
+}
+
+.tabla_proveedores .td_descripcion {
+    min-width: 300px;
+}
+
+.tabla_proveedores th {
+    /*Hace que el texto del thead se vea centrado*/
+    text-align: center;
+}
+
+.tabla_proveedores tr {
+    /*Asi las divisiones del centro del thead no se ven*/
+    border-collapse: collapse;
+    border: 2px solid #6a5449;
+}
+
+
+
+
+/*      reserva        */
+
+section.fechas {
+    display: flex;
+    flex-direction: column;
+}
+
+
+table#calendario {
+    background-color: white;
+}
+  
+
+table#calendario td {
+    padding: 35px;
+    position: relative;
+}
+
+
+table#calendario, table#calendario td {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+
+section.fechas .tabla_scroll #calendario .diasCalendario p.mesas {
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    color: brown;
+}
+
+
+section.fechas .tabla_scroll #calendario .diasCalendario p.dia {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    color:violet;
+    z-index: 0;
+}
+
+section.fechas p.mensaje {
+    background-color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 5px;
+    z-index: 0;
+}
+
+
+section.contenedorForm {
+    display: flex;
+    justify-content: center;
+}
+
+
+form.form {
+    padding: 20px;
+    background-color: #f8a4b1;
+    border-radius: 30px;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+
+
+#form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.contResumen {
+    width: 70%;
+    justify-self: center;
+}
+
+#resumen {
+    border-collapse: collapse;
+}
+
+#resumen thead tr th {
+    text-align: center;
+    border-bottom: 2px solid red;
+    padding: 5px;
+    width: 25%;
+}
+
+#resumen tr {
+    background-color: white;
+}
+
+#resumen #resumenBody tr td {
+    text-align: center;
+    border-bottom: 2px solid blue;
+}
+
+div.contResumen {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#resumen {
+    width: 70%;
+    justify-self: center;
+}
+
+section.fechas p.textoCalendario, section.fechas h2 {
+    margin: 10px;
+}
+
+
+
+/*      cv        */
+
+.busqueda_empleados p {
+    margin: 2% 2%
+}
+
+
+.lista_cv li {
+    list-style-type: square;
+    margin: 2% 10%;
+}
+
+
+
+/*      venta productos        */
+
+#captchaGenerador {
+    background-color: white;
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.form_btn {
+    width: fit-content;
+    padding: 2px;
+}
+
+#form_venta input{
+    margin-bottom: 10px;
+}
+
+#form_venta p {
+    margin-bottom: 5px;
+}
+
+.seccion_btn {
+    display: flex;
+}
+
+.form_varias_opciones {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*      footer        */
+
+footer {
+    background-color: #6a5449;
+    width: 100%;
+}
+
+
+.contenidoFooter {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "partners partners"
+        "contacto redes";
+    margin: 10px;
+    margin-bottom: 0px;
+    font-size: 75%;
+    column-gap: 20px;
+}
+
+.partners {
+    grid-area: partners;
+}
+
+.redes {
+    grid-area: redes;
+}
+
+.contacto {
+    grid-area: contacto;
+}
+
+.footer_info {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 140%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+footer .listasFooter {
+    list-style-type: none;
+}
+
+footer .listasFooter li {
+    margin: 5px;
+    margin-left: 20px;
+}
+
+.listasFooter div {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    height: 20px;
+}
+
+
+
+
+@media only screen and (min-width: 1000px) {
+
+    html {
+        font-size: 150%;
+    }
+
+    /*                 barra nav                    */
+
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+    
+    #btn-menu {
+        display: none;
+    }
+
+    .barra_nav.elementoOculto {
+        display: flex;
+        visibility: visible;
+    }
+
+    .barra_nav ul li {
+        display: inline-block;
+    }
+
+
+    /*                 inicio                    */
+
+    section.propuestas {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    figure.oferta img {
+        max-height: 700px;
+    }
+
+
+    section.allreviews .reviews_scroll {
+        display: grid;
+        width: 90%;
+        border: none;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "review1 review2 review3";
+        overflow-x: visible;
+        column-gap: 5px;
+    }
+
+
+    #review1, #review2, #review3 {
+        border: 2px solid #6a5449;
+        padding: 20px;
+    }
+
+
+    /*                 products                    */
+
+    article.producto {
+        display: flex;
+        flex-direction: row;
+        width: 65%;
+    }
+
+    figure.img_producto img {
+        height: 100%;
+        width: fit-content;
+    }
+
+
+
+    /*                 cv                     */
+
+    .busqueda_empleados p {
+        margin: 10px 20px;
+        width: 70%;
+    }
+    
+    
+    .lista_cv li {
+        margin: 10px 60px;
+    }
+
+
+
+
+    /*                 reserva                    */
+
+    section.fechas {
+        justify-items: center;
+    }
+
+    div.tabla_scroll {
+        /*hace que podamos desplazar la tabla hacia la derecha*/
+        width: fit-content;
+        align-self: center;
+    }
+
+    section.fechas p.textoCalendario, section.fechas h2 {
+        margin: 10%;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    
+    table#calendario td {
+        padding: 55px;
+    }
+
+
+    .form {
+        width: 30%;
+        margin-top: 20px;
+    }
+}

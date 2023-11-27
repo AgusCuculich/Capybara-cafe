@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="shortcut icon" href="images/CapybaraIco.ico.png">
+    <title>Capybara café | reservas</title>
+</head>
+
+<body>
+    <header class="menu">
+        <div class="logo_botonera">
+            <button type="button" id="btn-menu">Menú</button>
+            <img class="logo" src="images/CapybaraLogo.png" alt="logo">
+        </div>
+        <nav class="barra_nav elementoOculto">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="vender_nuestros_productos.html">Vende nuestros productos</a></li>
+                <li><a href="enviar_cv.html">Envianos tu cv</a></li>
+                <li><a href="reserva.html">Reservar mesa</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="fechas">
+            <p class="textoCalendario">Para realizar una reserva en nuestro cafe, deberá llenar los datos solicitados en el formulario. El
+                número violeta en la ezquina derecha superior de la celda del calendario representa el dia, mientras que
+                el número de la esquina inferior iaquierda representa la cantidad de mesas disponibles</p>
+            <h2>Calendario</h2>
+            <div class="tabla_scroll">
+                <table id="calendario">
+                    <tbody class="diasCalendario"></tbody>
+                </table>
+            </div>
+            <p class="mensaje elementoOculto">No hay más lugares disponibles en la fecha solicitada. Por favor
+                seleccione otra fecha.</p>
+        </section>
+        <section class="contenedorForm">
+            <!--Implementado para acomodar el form en el centro y que se vea mejor-->
+            <form id="form" class="form">
+                <label for="dia_escogido">Elija el dia</label>
+                <input type="number" id="dia_escogido" name="dia_escogido" required min="1" max="31" />
+
+                <label for="cant_mesas">Cantidad de mesas (2 personas x mesa)</label>
+                <div>
+                    <button type="button" id="btn_menos">-</button>
+                    <input type="number" id="cant_mesas" name="cant_mesas" value="0" required min="1" max="16">
+                    <button type="button" id="btn_mas">+</button>
+                    <button type="button" id="btn_tres">+3</button>
+                </div>
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="telefono">Número de telefono</label>
+                <input type="number" id="telefono" name="telefono" required>
+
+                <button type="submit" class="form_btn" id="btn_enviar">enviar</button>
+            </form>
+        </section>
+        <div class="contResumen">
+            <h2>Resumen</h2>
+            <table id="resumen">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Mesas reservadas</th>
+                        <th>Teléfono</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="resumenBody"></tbody>
+            </table>
+            <button type="button" id="btn_eliminar_tabla" class="elementoOculto">Borrar todos los items</button>
+        </div>
+    </main>
+    <footer>
+        <div class="contenidoFooter">
+            <section class="contacto">
+                <p class="footer_info">Contacto</p>
+                <ul class="listasFooter">
+                    <div>
+                        <img class="icon" src="images/wpp.png">
+                        <li>(+54) 2223000000</li>
+                    </div>
+                    <div>
+                        <img class="icon" src="images/correo.png">
+                        <li>capybaracafe@gmail.com</li>
+                    </div>
+                    <div>
+                        <img class="icon" src="images/ubicacion.png">
+                        <li>Evergreen Terrace 742 en Springfield</li>
+                    </div>
+                </ul>
+            </section>
+            <section class="redes">
+                <p class="footer_info">Redes sociales</p>
+                <ul class="listasFooter">
+                    <div>
+                        <img class="icon" src="images/facebook.png">
+                        <li>facebook</li>
+                    </div>
+                    <div>
+                        <img class="icon" src="images/ig.png">
+                        <li>instagram</li>
+                    </div>
+                    <div>
+                        <img class="icon" src="images/twitter.png">
+                        <li>twitter</li>
+                    </div>
+                </ul>
+            </section>
+            <section class="partners">
+                <p class="footer_info">Proveedores</p>
+                <p>Trabajamos con algunos de los mejores proveedores del mundo, haciendo de cada grano de café una
+                    experiencia única.</p>
+                <a href="proveedores.html">Conocer más</a>
+            </section>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/script_nav.js"></script>
+    <script type="text/javascript" src="js/calendario2.js"></script>
+</body>
+
+</html>

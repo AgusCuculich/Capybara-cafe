@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="shortcut icon" href="images/CapybaraIco.ico.png">
+    <title>Capybara café | ventas</title>
+</head>
+<body>
+    <header class="menu">
+        <div class="logo_botonera">
+            <button type="button" id="btn-menu">Menú</button>
+            <img class="logo" src="images/CapybaraLogo.png" alt="logo">
+        </div>
+        <nav class="barra_nav elementoOculto">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="vender_nuestros_productos.html">Vende nuestros productos</a></li>
+                <li><a href="enviar_cv.html">Envianos tu cv</a></li>
+                <li><a href="reserva.html">Reservar mesa</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contenedorForm">
+            <form id="form_venta" class="form">
+                <p>Por favor complete los siguientes datos: </p>
+                <label for="nombre_negocio">Nombre del negocio</label>
+                <input id="nombre_negocio" type="text" name="nombre_negocio" value="" required>
+
+                <label for="contacto_persona">Persona de contacto</label>
+                <input id="contacto_persona" type="text" name="contacto_persona" value="" required>
+
+                <label for="contacto_numero">Teléfono de contacto</label>
+                <input id="contacto_numero" type="number" name="contacto_numero" value="" required>
+
+                <label for="email">Correo electrónico</label>
+                <input id="email" type="email" name="email" value="" required>
+
+                <div class="form_varias_opciones">
+                    <p>Tipo de tienda</p>
+
+                    <label for="tienda_fisica"><input id="tienda_fisica" type="radio" name="tipo_tienda" value="Tienda física" required>Tienda física</label>
+
+                    <label for="tienda_online"><input id="tienda_online" type="radio" name="tipo_tienda" value="Tienda online"/>Tienda online</label>
+                    
+                    <label for="tienda_ambas"><input id="tienda_ambas" type="radio" name="tipo_tienda" value="Ambas"/>Ambas</label>
+
+                </div>
+                <div class="form_varias_opciones">
+                    <p>¿En qué producto estarías interesado?</p>
+
+                    <label for="cafe_molido"><input id="cafe_molido" type="checkbox" name="eleccion_cafe" value="Capybara Molido"/>Capybara Molido</label>
+                    
+                    <label for="cafe_torrado"><input id="cafe_torrado" type="checkbox" name="eleccion_cafe" value="Capybara Torrado"/>Capybara Torrado</label>
+                    
+                    <label for="cafe_instantaneo"><input id="cafe_instantaneo" type="checkbox" name="eleccion_cafe" value="Capybara Instantáneo"/>Capybara Instantáneo</label>
+                    
+                    <label for="Cafe_capsulas"><input id="Cafe_capsulas" type="checkbox" name="eleccion_cafe" value="Capybara Cápsulas"/>Capybara Cápsulas</label>
+                    
+                </div>
+                <p>Captcha</p>
+                <div id="captchaGenerador"></div>
+                <p>Ingrese los números del captcha</p>
+                <input id="captcha" type="number" name="captcha" value="" required>
+                <section class="seccion_btn">
+                    <button type="button" class="form_btn" id="btn-aceptar">Aceptar</button>
+                    <button type="button" class="form_btn" id="btn-reset">Reset</button>
+                    <button type="submit" class="elementoOculto" class="form_btn" id="btn-enviar" >Enviar formulario</button>
+                </section>
+            </form>
+        </section>
+        <p id="parrafoOculto" class="elementoOculto">¡Muchas gracias por comunicarse con nosotros! En la brevedad un asesor se pondrá en contacto con usted.</p>
+    </main>
+    <footer>
+        <div class="contenidoFooter">
+            <section class="contacto">
+                <p class="footer_info">Contacto</p>
+                <ul class="listasFooter">
+                    <div>
+                        <img class="icon" src="images/wpp.png">
+                        <li>(+54) 2223000000</li>
+                    </div>
+                    <div>
+                        <img class="icon" src="images/correo.png">
+                        <li>capybaracafe@gmail.com</li>
+                    </div>
+                    <div>
+                        <img class="icon" src="images/ubicacion.png">
+                        <li>Evergreen Terrace 742 en Springfield</li>
+                    </div>
+                </ul>
+            </section>
+            <section class="redes">
+                <p class="footer_info">Redes sociales</p>
+                <ul class="listasFooter">
+                    <div>
+                        <img class="icon" src="images/facebook.png">
+                        <li>facebook</li>
+                    </div>
+                    <div>
+                        <img class="icon" src="images/ig.png">
+                        <li>instagram</li>
+                    </div>
+                    <div>
+                        <img class="icon" src="images/twitter.png">
+                        <li>twitter</li>
+                    </div>
+                </ul>
+            </section>
+            <section class="partners">
+                <p class="footer_info">Proveedores</p>
+                <p>Trabajamos con algunos de los mejores proveedores del mundo, haciendo de cada grano de café una experiencia única.</p>
+                <a href="proveedores.html">Conocer más</a>
+            </section>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/script_nav.js"></script>
+    <script type="text/javascript" src="js/form_productos.js"></script>
+</body>
+</html>
